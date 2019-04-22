@@ -1,26 +1,61 @@
 /**
  * SYST 17796 Project Winter 2019 Base code.
- * Students can modify and extend to implement their game.
- * Add your name as a modifier and the date!
+ * This class models what a Card object is made of. Incorperating both Rank
+ * and Suits.
+ * Names: Ryan Hill, Nainesh Prajapati, Tavin Bousfield, Kevin Ly
  */
 package ca.sheridancollege.project;
 
-/**
- * A class to be used as the base Card class for the project. Must be general
- * enough to be instantiated for any Card game. Students wishing to add to the code 
- * should remember to add themselves as a modifier.
- * @author dancye, 2018
- */
-public abstract class Card 
-{
-    //default modifier for child classes
+public class Card {
+    
+    //the rank an suit from the Enums will be the datamembers
+    private Rank rank;
+    private Suit suit;
+    
+    //Default Constructor
+    public Card() {
+    }
+    
+    //Main Constructor
+    public Card(Rank rank, Suit suit) {
+        this.rank = rank;
+        this.suit = suit;
+    }
+    
+    //Getter for the rank
+    public Rank getRank() {
+        return rank;
+    }
+    
+    //Setter for the Rank
+    public void setRank(Rank rank) {
+        this.rank = rank;
+    }
+    
+    //Getting for the Suit
+    public Suit getSuit() {
+        return suit;
+    }   
+
+    //Setter for the Suit
+    public void setSuit(Suit suit) {
+        this.suit = suit;
+    }
     
     /**
-     * Students should implement this method for their specific children classes 
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
+     * toString to print off the Card objects
+     * @return String card info
      */
-    
     @Override
-    public abstract String toString();
-    
+    public String toString() {
+        return rank.getLongName() + " of " + suit.getSuitName() +"\n";
+    }
+   
+    /**
+     * Another toString to print off the short name and symbol of the Card
+     * @return String card info
+     */
+    public String toShortString(){
+        return rank.getShortName() + suit.getSymbol();
+    }
 }

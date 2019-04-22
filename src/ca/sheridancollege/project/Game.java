@@ -1,17 +1,13 @@
 /**
  * SYST 17796 Project Winter 2019 Base code.
- * Students can modify and extend to implement their game.
- * Add your name as a modifier and the date!
+ * The Game class that focuses on the aspects of how the game is played
+ * Names: Ryan Hill, Nainesh Prajapati, Tavin Bousfield, Kevin Ly
  */
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
 
-/**
- * The class that models your game. You should create a more specific
- * child of this class and instantiate the methods given.
- * @author dancye, 2018
- */
+
 public abstract class Game 
 {
     private final String gameName;//the title of the game
@@ -51,13 +47,18 @@ public abstract class Game
      * Play the game. This might be one method or many method calls depending
      * on your game.
      */
-    public abstract void play();
+    public void play(){
+
+    }
     
     /**
      * When the game is over, use this method to declare and display a winning
      * player.
      */
-    public abstract void declareWinner();
+    public void declareWinner(){
+
+    
+    }
 
    
     
